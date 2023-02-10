@@ -1,5 +1,5 @@
 <template>
-  <div class="image-output p-10 aspect-video max-h-[800px] mx-auto" id="imageOutput" :key="appStore.svg.feTurbulence.baseFrequency">
+  <div class="image-output aspect-video max-h-[800px] mx-auto" id="imageOutput" :key="appStore.svg.feTurbulence.baseFrequency">
     <svg width="0" height="0">
       <filter id="grainy" x="0" y="0" width="100%" height="100%">
         <feTurbulence type="fractalNoise" :baseFrequency="appStore.svg.feTurbulence.baseFrequency"></feTurbulence>
@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 import {useAppStore} from "@/stores/app";
-import {computed, ref} from "vue";
+import {computed} from "vue";
 import {translatePossiblePosition} from "@/services/PositionService";
 
 const appStore = useAppStore()

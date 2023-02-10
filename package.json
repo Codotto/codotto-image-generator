@@ -8,11 +8,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "dom-to-image-more": "^2.15.0",
     "flowbite": "^1.6.3",
     "pinia": "^2.0.30",
     "vue": "^3.2.45"
   },
   "devDependencies": {
+    "@types/dom-to-image": "^2.6.4",
     "@types/node": "^18.13.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "autoprefixer": "^10.4.13",

@@ -6,8 +6,20 @@
 </template>
 
 <script setup lang="ts">
+import domtoimage from "dom-to-image-more";
 
 const onDownloadClick = () => {
-  const outputImage = document.querySelector('#imageOutput') as HTMLElement;
+  const node = document.querySelector('#imageOutput') as HTMLElement;
+
+  domtoimage
+      .toPng(node)
+      .then(function (dataUrl) {
+        const img = new Image();
+        img.src = dataUrl;
+        document.body.appendChild(img);
+      })
+      .catch(function (error) {
+        console.error("oops, something went wrong!", error);
+      });
 }
 </script>
