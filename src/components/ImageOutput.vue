@@ -1,14 +1,16 @@
 <template>
-  <div class="image-output aspect-video max-h-[800px] mx-auto" id="imageOutput" :key="appStore.svg.feTurbulence.baseFrequency">
-    <svg width="0" height="0">
-      <filter id="grainy" x="0" y="0" width="100%" height="100%">
-        <feTurbulence type="fractalNoise" :baseFrequency="appStore.svg.feTurbulence.baseFrequency"></feTurbulence>
-        <feColorMatrix type="saturate" values="0"></feColorMatrix>
-        <feBlend in="SourceGraphic" mode="multiply"></feBlend>
-      </filter>
-    </svg>
-    <div class="image-output__img-container shadow-2xl rounded-lg overflow-hidden" :style="imageContainerStyles">
-      <div class="image-output__title" :style="titleStyles">{{appStore.postTitle}}</div>
+  <div class="max-h-[800px] aspect-video mx-auto">
+    <div class="image-output w-full h-full" id="imageOutput" :key="appStore.svg.feTurbulence.baseFrequency">
+      <svg width="0" height="0">
+        <filter id="grainy" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" :baseFrequency="appStore.svg.feTurbulence.baseFrequency"></feTurbulence>
+          <feColorMatrix type="saturate" values="0"></feColorMatrix>
+          <feBlend in="SourceGraphic" mode="multiply"></feBlend>
+        </filter>
+      </svg>
+      <div class="image-output__img-container shadow-2xl rounded-lg overflow-hidden" :style="imageContainerStyles">
+        <div class="image-output__title" :style="titleStyles">{{appStore.postTitle}}</div>
+      </div>
     </div>
   </div>
 </template>

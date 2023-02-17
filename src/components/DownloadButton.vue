@@ -6,7 +6,8 @@
 </template>
 
 <script setup lang="ts">
-import domtoimage from "dom-to-image-more";
+import domtoimage from "dom-to-image";
+import { saveAs } from 'file-saver';
 
 const onDownloadClick = () => {
   const node = document.querySelector('#imageOutput') as HTMLElement;
@@ -14,9 +15,7 @@ const onDownloadClick = () => {
   domtoimage
       .toPng(node)
       .then(function (dataUrl) {
-        const img = new Image();
-        img.src = dataUrl;
-        document.body.appendChild(img);
+        saveAs(dataUrl, 'poster-image.png');
       })
       .catch(function (error) {
         console.error("oops, something went wrong!", error);
