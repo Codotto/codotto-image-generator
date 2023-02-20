@@ -5,7 +5,7 @@ import Controls from "./components/Controls/Controls.vue";
 </script>
 
 <template>
-  <div>
+  <div class="mx-5">
     <Navigation/>
     <Controls/>
     <ImageOutput/>

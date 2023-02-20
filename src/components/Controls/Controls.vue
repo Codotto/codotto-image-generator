@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-slate-800 p-5 flex-col md:flex-row flex flex-wrap justify-between items-end gap-5">
-    <div class="flex flex-wrap gap-5">
+  <div class="bg-slate-800 py-5 flex-col md:flex-row flex flex-wrap justify-between md:items-end gap-5">
+    <div class="flex flex-col md:flex-row flex-wrap gap-5">
       <Title/>
       <FontSizeControl/>
       <FeTurbulance/>
