@@ -27,7 +27,7 @@ const isSelected = (option: SelectOption) => {
 }
 
 const props = defineProps({
-  value: { type: Object as PropType<SelectOption | null>, required: true },
+  value: { type: Object as PropType<SelectOption | null | undefined>, required: true },
   options: {type: Array as PropType<SelectOption[]>, required: true},
   label: {type: String, required: true},
   labelId: {type: String, default: () => Math.random().toString()}

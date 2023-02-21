@@ -27,10 +27,10 @@ const imageContainerStyles = computed(() => ({
   height: '100%',
 }))
 
-const titleStyles = computed(() => ({
+const titleStyles = computed<Record<string, string | number>>(() => ({
   fontSize: `${appStore.fontSizeInt}px`,
   position: 'absolute',
-  fontWeight: '700',
+  fontWeight: 700,
   mixBlendMode: appStore.blendMode,
   backgroundColor: 'transparent',
   height: 'auto',
