@@ -26,20 +26,20 @@ export function translatePossiblePosition(position: POSSIBLE_POSITIONS): Record<
   switch (position) {
     case POSITIONS.TOP_LEFT:
       return {
-        top: '10px',
-        left: '10px',
+        top: '30px',
+        left: '30px',
       }
     case POSITIONS.TOP_MIDDLE:
       return {
-        top: '10px',
+        top: '30px',
         left: '50%',
         transform: 'translateX(-50%)',
         textAlign: 'center',
       }
     case POSITIONS.TOP_RIGHT:
       return {
-        top: '10px',
-        right: '10px',
+        top: '30px',
+        right: '30px',
         textAlign: 'right',
       }
     case POSITIONS.CENTER:
@@ -51,20 +51,20 @@ export function translatePossiblePosition(position: POSSIBLE_POSITIONS): Record<
       }
     case POSITIONS.BOTTOM_LEFT:
       return {
-        bottom: '10px',
-        left: '10px',
+        bottom: '30px',
+        left: '30px',
       }
     case POSITIONS.BOTTOM_MIDDLE:
       return {
-        bottom: '10px',
+        bottom: '30px',
         left: '50%',
         transform: 'translateX(-50%)',
         textAlign: 'center',
       }
     case POSITIONS.BOTTOM_RIGHT:
       return {
-        bottom: '10px',
-        right: '10px',
+        bottom: '30px',
+        right: '30px',
         textAlign: 'right',
       }
     default:
